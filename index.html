@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Task</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bulb img {
+            width: auto;
+            height: 500px;
+            margin: 70px;
+            border-radius: 20px;
+        }
+
+        .buttons {
+            display: fixed;
+        }
+
+        .buttons button {
+            width: 100px;
+            height: 40px;
+            border: 2px solid grey;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .buttons button:hover {
+            box-shadow: 3px 3px 5px grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="bulb" id="bulbDiv">
+            <img id="image" src="./off.jpg" alt="offBulb">
+        </div>
+        <div class="buttons">
+            <button id="1" onclick="function1()">OFF</button>
+            <button id="2" onclick="function2()">ON</button>
+            <button id="3" onclick="function3()">HIDE</button>
+            <button id="4" onclick="function4()">SHOW</button>
+        </div>
+    </div>
+    <script>
+        function function1() {
+            document.getElementById("image").src = "./off.jpg";
+        }
+        function function2() {
+            document.getElementById("image").src = "./on.jpg";
+        }
+        function function3() {
+            document.getElementById("bulbDiv").style.visibility = "hidden";
+
+
+        }
+        function function4() {
+            document.getElementById("bulbDiv").style.visibility = "visible";
+        }
+
+    </script>
+</body>
+
+</html>
